@@ -82,7 +82,7 @@ function App() {
           {/* Ruta por defecto */}
           <Route path="/" element={
             <div className="container mt-4">
-              <h2>Bienvenido a la Gestión</h2>
+              <h2>Bienvenido a la Gestión de Estudiantes</h2>
               <p>Selecciona una opción del menú.</p>
             </div>
           } />
