@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Configurar baseURL para evitar repetición en las rutas
-const API_URL = 'http://127.0.0.1:5000/api/v1.0/';
+const API_URL = 'http://192.168.249.179:5000/api/v1.0/';
 
 // Crear instancia de axios con configuración predeterminada
 const api = axios.create({

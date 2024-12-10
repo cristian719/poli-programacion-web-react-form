@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import EstudiantesForm from './components/Estudiantes/EstudiantesForm';
 import EstudiantesList from './components/Estudiantes/EstudiantesList';
+import CursosForm from './components/Cursos/CursosForm';
+import CursosList from './components/Cursos/CursosList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [estudianteSeleccionado, setEstudianteSeleccionado] = useState(null);
-
+  const [CursoSeleccionado, setCursoSeleccionado] = useState(null);
+  
   const actualizarListado = () => {
     setEstudianteSeleccionado(null);
+    setCursoSeleccionado(null);
   };
 
   return (
@@ -68,6 +72,7 @@ function App() {
               <h2>Profesores</h2>
               {/* Aquí puedes agregar el componente correspondiente de Profesores */}
               <p>Contenido de Profesores</p>
+              
             </div>
           } />
           
@@ -76,6 +81,16 @@ function App() {
               <h2>Cursos</h2>
               {/* Aquí puedes agregar el componente correspondiente de Cursos */}
               <p>Contenido de Cursos</p>
+              <CursosForm
+                CursosFormSeleccionado={CursoSeleccionado}
+                actualizarListado={actualizarListado}
+              />
+              <hr/>
+              <CursosList
+                seleccionarCurso={setCursoSeleccionado}
+              />
+              <br></br>
+              <br></br>
             </div>
           } />
           
